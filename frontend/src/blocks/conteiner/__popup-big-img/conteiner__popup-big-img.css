@@ -1,0 +1,6 @@
+.conteiner__popup-big-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

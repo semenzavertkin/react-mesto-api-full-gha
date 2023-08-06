@@ -1,0 +1,19 @@
+.profile__form {
+  padding-left: 30px;
+  display: grid;
+  gap: 16px 18px;
+  grid-template-areas: 
+    "name edit"
+    "caption caption";
+  align-content: center;
+  align-items: baseline;
+}
+
+@media screen and (max-width: 500px) {
+  .profile__form {
+    padding: 0;
+    justify-items: center;
+    gap: 14px 10px;
+    padding-bottom: 36px;
+  }
+}

@@ -1,0 +1,15 @@
+.profile__bio {
+  display: grid;
+  grid-template-areas:
+    "name edit"
+    "about about";
+  column-gap: 30px;
+  row-gap: 16px;
+}
+
+@media screen and (max-width: 500px) {
+  .profile__bio {
+    column-gap: 10px;
+    row-gap: 14px;
+  }
+}
