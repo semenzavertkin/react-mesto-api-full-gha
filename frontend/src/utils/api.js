@@ -73,7 +73,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "http://localhost:3001",
+  baseUrl: "https://semenzavertkin.nomoredomains.sbs",
   headers: {
     "Content-Type": "application/json",
   },
