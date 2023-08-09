@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.65.217
 
-Frontend https://...
+Frontend https://semenzavertkin.nomoredomains.sbs
 
-Backend https://...
+Backend https://api.semenzavertkin.nomoredomains.sbs
