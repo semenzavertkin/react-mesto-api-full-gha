@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+const cors = require('./middlewares/cors');
 
 const routes = require('./routes');
 const { login, createUser } = require('./controllers/users');
@@ -17,7 +17,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
 const { PORT = 3000 } = process.env;
-app.use(cors({ origin: 'https://semenzavertkin.nomoredomains.sbs' }));
+app.use(cors);
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
