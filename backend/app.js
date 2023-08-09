@@ -17,15 +17,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 
 const app = express();
 const { PORT = 3000 } = process.env;
-const corsSettings = {
-  origin: [
-    'https://semenzavertkin.nomoredomains.sbs',
-    'http://localhost:3000',
-    'http://localhost:3001',
-  ],
-  methods: ['GET', 'PUT', 'POST', 'PATCH', 'DELETE'],
-};
-app.use(cors(corsSettings));
+app.use(cors({ origin: 'https://semenzavertkin.nomoredomains.sbs' }));
 
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
