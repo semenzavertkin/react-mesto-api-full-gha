@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.65.217
+IP 158.160.65.217
 
 Frontend https://semenzavertkin.nomoredomains.sbs
 
