@@ -1,4 +1,4 @@
-export const BASE_URL = "https://semenzavertkin.nomoredomains.sbs";
+export const BASE_URL = "https://api.semenzavertkin.nomoredomains.sbs";
 
 const checkResponse = (res) => {
     if (res.ok) {

@@ -56,13 +56,11 @@ const likeCard = (req, res, next) => {
     { $addToSet: { likes: req.user._id } },
     { new: true },
   )
-    .orFail(() => new Error('NotFound'))
+    .orFail(() => new NotFound('Передан несуществующий _id карточки'))
     .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === 'CastError') {
         next(new BadRequest('Переданы некорректные данные при создании пользователя'));
-      } else if (err.message === 'NotFound') {
-        next(new NotFound(' Передан несуществующий _id карточки'));
       } else {
         next(err);
       }
@@ -75,13 +73,11 @@ const dislikeCard = (req, res, next) => {
     { $pull: { likes: req.user._id } },
     { new: true },
   )
-    .orFail(() => new Error('NotFound'))
+    .orFail(() => new NotFound('Передан несуществующий _id карточки'))
     .then((card) => res.send(card))
     .catch((err) => {
       if (err.name === 'CastError') {
         next(new BadRequest('Переданы некорректные данные для снятия лайка'));
-      } else if (err.message === 'NotFound') {
-        next(new NotFound(' Передан несуществующий _id карточки'));
       } else {
         next(err);
       }

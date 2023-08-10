@@ -73,7 +73,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: "https://semenzavertkin.nomoredomains.sbs",
+  baseUrl: "https://api.semenzavertkin.nomoredomains.sbs",
   headers: {
     "Content-Type": "application/json",
   },
